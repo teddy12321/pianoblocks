@@ -142,6 +142,16 @@ export default {
                 .attr('width', 200)
                 .attr('height', 100)
                 .attr('fill', '#ff9900');
+
+            let starttxt= svg
+                .append('text')
+                .text("start")
+                .attr('x', 300)
+                .attr('y', 300)
+                .attr("font-size", 50)
+                .attr('dx', 50)
+                .attr('dy', 65)
+                .attr('fill', '#ffffff');
             
             let startcolorhover = '#ff9900';
             let startcolorout = '#ff6600';
@@ -215,6 +225,7 @@ export default {
                     .attr('fill', '#FF4500');
                     audio.play();
                     start.attr('fill', 'transparent').lower();
+                    starttxt.attr('fill', 'transparent').lower();
                     startcolorhover = 'transparent';
                     startcolorout = 'transparent';
                     starttime =
