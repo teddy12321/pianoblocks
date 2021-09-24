@@ -220,7 +220,6 @@ export default {
                 [100,  33350+accurate+90*330],
                 [100,  33350+accurate+92*330],
                 [100,  33350+accurate+94*330],
-
             ]
             const svg = select(svgRef.value);
             let rects = [];
@@ -229,6 +228,7 @@ export default {
             const bgbtnHeight = 600
             const delta = 100
             let preP= -1;
+            var cnt = 0;
             for (let i = 0; i < data.length; i++) {
                 let rand = Math.floor(Math.random() * 4);
                 while (rand == preP){
@@ -330,11 +330,15 @@ export default {
                             if(Math.abs(y+ parseInt(item.rect._groups[0][0].attributes['height'].value)-checkLine) <= delta){
                                 item.rect._groups[0][0].attributes['fill'].value = 'transparent'
                                 fail = 0
+                                cnt++
                             }
                             break
                         }
                         if(fail ==1){
                             alert("Game Over")
+                        }
+                        if(cnt == data.length){
+                            alert("You Win")
                         }
 
                     };
