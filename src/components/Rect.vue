@@ -3,7 +3,7 @@
         <svg ref="svgRef"></svg>
     </div>
    <audio id="song">
-  <source src="Song.mp3" type="audio/mp3">
+  <source src="Pi Slowed.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio> 
 </template>
@@ -22,7 +22,7 @@ const drawRect = (height, index, svg) => {
         .attr('y', -1 * height)
         .attr('width', w)
         .attr('height', height)
-        .attr('fill', 'green');
+        .attr('fill', 'black');
     return rect;
     // var rectTran = rect.transition()
     //                     .delay(delay)
@@ -44,7 +44,7 @@ const tranRect = (rect, delay) => {
             if(rect._groups[0][0].attributes['fill'].value!='transparent' && fail == 0){
                 fail = 1
                 console.log(rect)
-                alert('fail')
+                alert('Game Over')
                 rectTran.remove();
             }
         });
@@ -60,23 +60,174 @@ export default {
         const svgRef = ref(null);
         const { resizeRef, resizeState } = useResizeObserver();
         var datestart = new Date();
-        
+        var accurate = 250
 
         onMounted(() => {
             const data = [
-                [100, 3000],
-                [200, 4000],
-                [100, 3500],
-                [300, 5000],
-                [100, 5750],
+                [100, 6150+accurate],
+                [100, 6450+accurate],
+                [100, 6750+accurate],
+                [100, 7050+accurate],
+                [100, 7350+accurate],
+                [100, 7650+accurate],
+                [100, 7950+accurate],
+                [50, 8550+accurate],
+                [100, 8700+accurate],
+                [100, 9000+accurate],
+                [100, 9300+accurate],
+                [100, 9600+accurate],
+                [100, 9900+accurate],
+                [100, 10200+accurate],
+                [100, 10500+accurate],
+                [100, 10800+accurate],
+                [100, 11100+accurate],
+                [100, 11700+accurate],
+                [100, 12300+accurate],
+                [200, 12600+accurate],
+                [100, 13200+accurate],
+                [200, 13800+accurate],
+                [200, 14400+accurate],
+                [200, 15000+accurate],
+                [200, 15600+accurate],
+                [100, 16500+accurate],
+                [100, 17100+accurate],
+                [100, 17400+accurate],
+                [100, 17700+accurate],
+                [100, 18000+accurate],
+                [100, 18300+accurate],
+                [100, 18600+accurate],
+                [100, 18900+accurate],
+                [100, 19200+accurate],
+                [100, 20100+accurate],
+                [100, 20400+accurate],
+                [100, 21000+accurate],
+                [100, 21300+accurate],
+                [100, 21900+accurate],
+                [100, 22200+accurate],
+                [100, 22500+accurate],
+                [100, 22800+accurate],
+                [100, 23100+accurate],
+                [100, 23400+accurate],
+                [100, 23700+accurate],
+                [100, 24000+accurate],
+                [100, 24300+accurate],
+                [100, 24600+accurate],
+                [100, 24900+accurate],
+                [100, 25550+accurate],
+                [100, 25700+accurate],
+                [100, 26300+accurate],
+                [100, 26600+accurate],
+                [100, 26900+accurate],
+                [50,  27200+accurate],
+                [50,  27350+accurate],
+                [50,  27500+accurate],
+                [50,  27750+accurate],
+                [50,  27900+accurate],
+                [50,  28050+accurate],
+                [100,  28950+accurate],
+                [100,  29550+accurate],
+                [100,  29850+accurate],
+                [100,  30150+accurate],
+                [100,  30450+accurate],
+                [100,  30750+accurate],
+                [100,  31050+accurate],
+                [100,  31350+accurate],
+                [100,  31650+accurate],
+                [100,  31950+accurate],
+                [100,  32250+accurate],
+                [100,  32550+accurate],
+                [100,  32850+accurate],
+                [100,  33350+accurate+1*300],
+                [100,  33350+accurate+2*330],
+                [100,  33350+accurate+3*330],
+                [100,  33350+accurate+4*330],
+                [100,  33350+accurate+5*330],
+                [100,  33350+accurate+6*330],
+                [100,  33350+accurate+7*330],
+                [100,  33350+accurate+8*330],
+                [100,  33350+accurate+9*330],
+                [100,  33350+accurate+10*330],
+                [100,  33350+accurate+11*330],
+                [100,  33350+accurate+12*330],
+                [100,  33350+accurate+13*330],
+                [100,  33350+accurate+14*330],
+                [100,  33350+accurate+15*330],
+                [100,  33350+accurate+16*330],
+                [100,  33350+accurate+17*330],
+                [100,  33350+accurate+18*330],
+                [100,  33350+accurate+19*330],
+                [100,  33350+accurate+20*330],
+                [100,  33350+accurate+21*330],
+                [100,  33350+accurate+22*330],
+                [100,  33350+accurate+23*330],
+                [100,  33350+accurate+24*330],
+                [100,  33350+accurate+25*330],
+                [100,  33350+accurate+26*330],
+                [100,  33350+accurate+27*330],
+                [100,  33350+accurate+28*330],
+                [100,  33350+accurate+29*330],
+                [100,  33350+accurate+30*330],
+                [100,  33350+accurate+31*330],
+                [100,  33350+accurate+32*330],
+                [100,  33350+accurate+33*330],
+                [100,  33350+accurate+34*330],
+                [100,  33350+accurate+35*330],
+                [100,  33350+accurate+36*330],
+                [100,  33350+accurate+37*330],
+                [100,  33350+accurate+38*330],
+                [100,  33350+accurate+39*330],
+                [100,  33350+accurate+40*330],
+                [100,  33350+accurate+41*330],
+                [100,  33350+accurate+42*330],
+                [100,  33350+accurate+43*330],
+                [100,  33350+accurate+44*330],
+                [100,  33350+accurate+45*330],
+                [100,  33350+accurate+46*330],
+                [100,  33350+accurate+47*330],
+                [100,  33350+accurate+48*330],
+                [100,  33350+accurate+49*330],
+                [100,  33350+accurate+50*330],
+                [100,  33350+accurate+51*330],
+                [100,  33350+accurate+52*330],
+                [100,  33350+accurate+53*330],
+                [100,  33350+accurate+54*330],
+                [100,  33350+accurate+55*330],
+                [100,  33350+accurate+56*330],
+                [100,  33350+accurate+57*330],
+                [100,  33350+accurate+58*330],
+                [100,  33350+accurate+59*330],
+                [100,  33350+accurate+60*330],
+                [100,  33350+accurate+61*330],
+                [100,  33350+accurate+62*330],
+                [100,  33350+accurate+63*330],
+                [100,  33350+accurate+64*330],
+                [50,  33350+accurate+65.5*330],
+                [100,  33350+accurate+66*330],
+                [100,  33350+accurate+67*330],
+                [100,  33350+accurate+68*330],
+                [100,  33350+accurate+69.5*330],
+                [100,  33350+accurate+70*330],
+                [100,  33350+accurate+71.5*330],
+                [150,  33350+accurate+72*330],
+                [100,  33350+accurate+75*330],
+                [100,  33350+accurate+76*330],
+                [100,  33350+accurate+78*330],
+                [100,  33350+accurate+81*330],
+                [100,  33350+accurate+82*330],
+                [100,  33350+accurate+84*330],
+                [100,  33350+accurate+85*330],
+                [100,  33350+accurate+86*330],
+                [100,  33350+accurate+90*330],
+                [100,  33350+accurate+92*330],
+                [100,  33350+accurate+94*330],
 
-            ];
+            ]
             const svg = select(svgRef.value);
             let rects = [];
             let transs = [];
             const checkLine = 450
             const bgbtnHeight = 600
-            const delta = 25
+            const delta = 100
             let preP= -1;
             for (let i = 0; i < data.length; i++) {
                 let rand = Math.floor(Math.random() * 4);
@@ -145,7 +296,7 @@ export default {
 
             let starttxt= svg
                 .append('text')
-                .text("start")
+                .text("Start")
                 .attr('x', 300)
                 .attr('y', 300)
                 .attr("font-size", 50)
@@ -183,7 +334,7 @@ export default {
                             break
                         }
                         if(fail ==1){
-                            alert("fail")
+                            alert("Game Over")
                         }
 
                     };
@@ -216,12 +367,12 @@ export default {
 
             start
                 .on('click', (event) => {
-                    var audio = new Audio('Song.mp3');
+                    var audio = new Audio('Pi Slowed.mp3');
                     svg.append('rect') //添加一个矩形
                     .attr('x', 0)
                     .attr('y', checkLine)
                     .attr('width', 800)
-                    .attr('height', 2)
+                    .attr('height', 10)
                     .attr('fill', '#FF4500');
                     audio.play();
                     start.attr('fill', 'transparent').lower();
