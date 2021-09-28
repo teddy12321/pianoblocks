@@ -1,18 +1,11 @@
-# using-vue3-with-d3
+# Mini Game for School's Pi Day Celebrations
 
-A small example on how to create a responsive chart component with D3 and Vue 3 (Composition API).
+Demo URL: http://www.dududexiaowu.top:8080/
 
-[Demo](https://muri.dev/using-vue3-with-d3/)
+```
+yarn install & yarn serve
+```
 
-## Components
-
-- [**App.vue**](https://github.com/muratkemaldar/using-vue3-with-d3/blob/master/src/App.vue)
-- [**ResponsiveLineChart.vue**](https://github.com/muratkemaldar/using-vue3-with-d3/blob/master/src/components/ResponsiveLineChart.vue)
-
-## Hooks
-
-- [**resizeObserver.js**](https://github.com/muratkemaldar/using-vue3-with-d3/blob/master/src/use/resizeObserver.js) (for observing width / height of an element via ResizeObserver API)
-
-## Related
-
-- [The Muratorium](https://www.youtube.com/channel/UCKfcSawDV88REF9jVwqqbag) (my YouTube Channel)
+Press "Start" to start game
+There are four columns of blocks, each representing the buttons 'A', 'S', 'D', 'F', where 'A' controls the left column and 'F' controls the right column.  Press the corresponding button when the block touches the red line
+If mispressed, the game will end

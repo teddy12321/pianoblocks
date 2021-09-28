@@ -1,9 +1,9 @@
 {
-  "name": "using-vue3-with-d3",
+  "name": "PiGame",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --disableHostCheck=true",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
